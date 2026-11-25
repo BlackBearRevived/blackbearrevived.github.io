@@ -1,4 +1,4 @@
-const owner = "BlackBearRedux";
+const owner = "BlackBearRevived";
 const profile = `https://github.com/${owner}?tab=repositories`;
 const cacheKey = `github-projects:${owner}`;
 const list = document.querySelector("#projects");
