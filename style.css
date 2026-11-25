@@ -1,0 +1,64 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #111618;
+  color: #f2f5f2;
+  --muted: #b0bcb6;
+  --mint: #a0e8bd;
+  --line: #374741;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 70% 0%, #1c3028 0%, transparent 36rem);
+  min-height: 100svh;
+}
+.shell { width: min(56rem, calc(100% - 3rem)); margin-inline: auto; }
+.masthead {
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.handle, .list-header {
+  font: 0.875rem/1.5 "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+.handle { color: var(--mint); }
+a { color: inherit; text-underline-offset: 0.22em; }
+a:hover { color: var(--mint); }
+a:focus-visible { outline: 2px solid var(--mint); outline-offset: 4px; }
+.masthead a { font-size: 0.875rem; color: var(--muted); }
+main { padding-block: clamp(3rem, 8vw, 6rem) 4rem; }
+h1 { margin: 0; font-size: clamp(3.5rem, 10vw, 7rem); letter-spacing: -0.075em; line-height: 0.98; }
+h1 span { color: var(--mint); }
+.intro { margin: 1.3rem 0 clamp(2.5rem, 6vw, 4rem); color: var(--muted); font-size: 1.125rem; }
+.list-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+}
+h2 { font: inherit; color: var(--mint); margin: 0; }
+.projects { list-style: none; margin: 0; padding: 0; }
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem 2rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.project h3 { margin: 0; font-size: 1.125rem; overflow-wrap: anywhere; }
+.project h3 a { text-decoration: none; }
+.project h3 a:hover { text-decoration: underline; }
+.project p { margin: 0.35rem 0 0; color: var(--muted); line-height: 1.5; overflow-wrap: anywhere; }
+.project .meta { margin: 0; font-size: 0.875rem; white-space: nowrap; }
+@media (max-width: 38rem) {
+  .project { flex-direction: column; }
+}
